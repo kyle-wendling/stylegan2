@@ -28,6 +28,8 @@ if __name__ == "__main__":
                                                LANDMARKS_MODEL_URL, cache_subdir='temp'))
     RAW_IMAGES_DIR = sys.argv[1]
     ALIGNED_IMAGES_DIR = sys.argv[2]
+    
+        print('Loaded network "%s"' % landmarks_model_path)
 
     landmarks_detector = LandmarksDetector(landmarks_model_path)
     for img_name in [x for x in os.listdir(RAW_IMAGES_DIR) if x[0] not in '._']:
